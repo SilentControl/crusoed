@@ -4,6 +4,15 @@ using System.Collections;
 public class PickableItem : MonoBehaviour {
 
     public string itemName;
+    public enum enumItemType
+    {
+        FOOD,
+        TOOLS,
+        WEAPONS,
+        MISC
+    };
+
+    public int itemType;
 	// Use this for initialization
 	void Start ()
     {

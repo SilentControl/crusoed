@@ -3,14 +3,30 @@ using System.Collections;
 
 public class Food : MonoBehaviour {
 
-    public int healValue;
+    public int healthValue;
+    public int hungerValue;
+    public string foodName;
 
 	// Use this for initialization
 	void Start () {
+        healthValue = 20;
+        hungerValue = -25;
+        foodName = "defaultFood";
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    public int getHealthValue()
+    {
+        return healthValue;
+    }
+
+    public int getHungerValue()
+    {
+        return hungerValue;
+    }
+
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }

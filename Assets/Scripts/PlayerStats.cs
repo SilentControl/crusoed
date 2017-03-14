@@ -10,29 +10,56 @@ public class PlayerStats : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        health = hunger = thirst = 100;
-        ticks = 0;
+        health = 100;
+        hunger = thirst = ticks = 0;
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    public void modifyHealth(int value)
+    {
+        health += value;
+        if (health >= 100)
+            health = 100;
+        if (health <= 0)
+            health = 0;
+    }
+
+    public void modifyHunger(int value)
+    {
+        hunger += value;
+        if (hunger >= 100)
+            hunger = 100;
+        if (hunger <= 0)
+            hunger = 0;
+    }
+
+    public void modifyThirst(int value)
+    {
+        thirst += value;
+        if (thirst >= 100)
+            thirst = 100;
+        if (thirst <= 0)
+            thirst = 0;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
     {
         ticks++;
         if (ticks % 100 == 0)
         {
-            hunger--;
-            thirst -= 2;
+            hunger++;
+            thirst += 2;
 
-            if (hunger < 0)
+            if (hunger >= 100)
             {
                 health--;
-                hunger = 0;
+                hunger = 100;
             }
 
-            if (thirst < 0)
+            if (thirst >= 100)
             {
                 health -= 2;
-                thirst = 0;
+                thirst = 100;
             }
         }
 	}

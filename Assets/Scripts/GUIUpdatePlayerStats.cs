@@ -14,7 +14,7 @@ public class GUIUpdatePlayerStats : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         sliders[0].value = playerStats.health;
         sliders[1].value = playerStats.hunger;
         sliders[2].value = playerStats.thirst;
