@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
 
+    //replace with GameObject
     // change to KeyValuePair<Food, int> etc
     public Dictionary<string, KeyValuePair<Food, int>> food;
     public Dictionary<string, KeyValuePair<Tool, int>> tools;
@@ -18,10 +19,14 @@ public class Inventory : MonoBehaviour {
     };
 
     public GameObject player;
-    public PlayerStats playerStats;
+    private PlayerStats playerStats;
     // Use this for initialization
     void Start () {
         playerStats = player.GetComponent<PlayerStats>();
+        food = new Dictionary<string, KeyValuePair<Food, int>>();
+        tools = new Dictionary<string, KeyValuePair<Tool, int>>();
+        weapons = new Dictionary<string, KeyValuePair<Weapon, int>>();
+        misc = new Dictionary<string, KeyValuePair<Misc, int>>();
 	}
 	
 	// Update is called once per frame
@@ -41,11 +46,14 @@ public class Inventory : MonoBehaviour {
                 {
                     KeyValuePair<Food, int> entry = food[foodItem.foodName];
                     int total = entry.Value;
+                    total++;
                     food[foodItem.foodName] = new KeyValuePair<Food, int>(entry.Key, total);
                 }
 
                 else
-                    food.Add(foodItem.foodName, new KeyValuePair<Food, int>(item.GetComponent<Food>(), 0));
+                {
+                    food.Add(foodItem.foodName, new KeyValuePair<Food, int>(item.GetComponent<Food>(), 1));
+                }
                 break;
 
             case (int)enumItemType.TOOLS:
@@ -54,6 +62,7 @@ public class Inventory : MonoBehaviour {
                 {
                     KeyValuePair<Tool, int> entry = tools[toolItem.toolName];
                     int total = entry.Value;
+                    total++;
                     tools[toolItem.toolName] = new KeyValuePair<Tool, int>(entry.Key, total);
                 }
 
@@ -67,6 +76,7 @@ public class Inventory : MonoBehaviour {
                 {
                     KeyValuePair<Weapon, int> entry = weapons[weaponItem.weaponName];
                     int total = entry.Value;
+                    total++;
                     weapons[weaponItem.weaponName] = new KeyValuePair<Weapon, int>(entry.Key, total);
                 }
 
@@ -80,6 +90,7 @@ public class Inventory : MonoBehaviour {
                 {
                     KeyValuePair<Misc, int> entry = misc[miscItem.miscName];
                     int total = entry.Value;
+                    total++;
                     misc[miscItem.miscName] = new KeyValuePair<Misc, int>(entry.Key, total);
                 }
 

@@ -9,9 +9,6 @@ public class Food : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        healthValue = 20;
-        hungerValue = -25;
-        foodName = "defaultFood";
 	}
 
     public int getHealthValue()
