@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CraftSystem.cs" />
+    <Compile Include="Assets\Scripts\CraftingItem.cs" />
     <Compile Include="Assets\Scripts\Food.cs" />
     <Compile Include="Assets\Scripts\GUIInventory.cs" />
     <Compile Include="Assets\Scripts\GUIUpdatePlayerStats.cs" />

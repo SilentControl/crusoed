@@ -127,4 +127,9 @@ public class Inventory : MonoBehaviour {
         }
 
     }
+
+    public bool contains(string item)
+    {
+        return food.ContainsKey(item);
+    }
 }
