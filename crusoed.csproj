@@ -71,6 +71,9 @@
     <Compile Include="Assets\Scripts\GUIInventory.cs" />
     <Compile Include="Assets\Scripts\GUIUpdatePlayerStats.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\InventoryNew.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\ItemCollection.cs" />
     <Compile Include="Assets\Scripts\Misc.cs" />
     <Compile Include="Assets\Scripts\PickableItem.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />

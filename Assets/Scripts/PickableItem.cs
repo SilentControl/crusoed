@@ -4,19 +4,11 @@ using System.Collections;
 public class PickableItem : MonoBehaviour {
 
     public string itemName;
-    public enum enumItemType
-    {
-        FOOD,
-        TOOLS,
-        WEAPONS,
-        MISC
-    };
-
-    public int itemType;
+    public int id;
+    public ItemType itemType;
 	// Use this for initialization
 	void Start ()
     {
-        itemName = "genericItem";
 	}
 
     /*private void OnCollisionEnter2D(Collision2D collision)
@@ -32,4 +24,9 @@ public class PickableItem : MonoBehaviour {
     {
 	
 	}
+
+    public int getId()
+    {
+        return id;
+    }
 }

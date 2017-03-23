@@ -10,13 +10,6 @@ public class Inventory : MonoBehaviour {
     public Dictionary<string, KeyValuePair<Tool, int>> tools;
     public Dictionary<string, KeyValuePair<Weapon, int>> weapons;
     public Dictionary<string, KeyValuePair<Misc, int>> misc;
-    public enum enumItemType
-    {
-        FOOD,
-        TOOLS,
-        WEAPONS,
-        MISC
-    };
 
     public GameObject player;
     private PlayerStats playerStats;
@@ -40,7 +33,7 @@ public class Inventory : MonoBehaviour {
         PickableItem pickedItem = item.GetComponent<PickableItem>();
         switch (pickedItem.itemType)
         {
-            case (int)enumItemType.FOOD:
+            case ItemType.Food:
                 Food foodItem = item.GetComponent<Food>();
                 if (food.ContainsKey(foodItem.foodName))
                 {
@@ -56,7 +49,7 @@ public class Inventory : MonoBehaviour {
                 }
                 break;
 
-            case (int)enumItemType.TOOLS:
+            case ItemType.Tool:
                 Tool toolItem = item.GetComponent<Tool>();
                 if (tools.ContainsKey(toolItem.toolName))
                 {
@@ -70,7 +63,7 @@ public class Inventory : MonoBehaviour {
                     tools.Add(toolItem.toolName, new KeyValuePair<Tool, int>(item.GetComponent<Tool>(), 0));
                 break;
 
-            case (int)enumItemType.WEAPONS:
+            case ItemType.Weapon:
                 Weapon weaponItem = item.GetComponent<Weapon>();
                 if (weapons.ContainsKey(weaponItem.weaponName))
                 {
@@ -84,7 +77,7 @@ public class Inventory : MonoBehaviour {
                     weapons.Add(weaponItem.weaponName, new KeyValuePair<Weapon, int>(item.GetComponent<Weapon>(), 0));
                 break;
 
-            case (int)enumItemType.MISC:
+            case ItemType.Misc:
                 Misc miscItem = item.GetComponent<Misc>();
                 if (misc.ContainsKey(miscItem.miscName))
                 {
