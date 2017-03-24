@@ -4,19 +4,24 @@ using System.Collections.Generic;
 
 public class InventoryNew : MonoBehaviour {
 
-    private List<Stack> stacks;
+    public List<Stack> stacks;
     public GameObject itemDatabase;
+    public GameObject inventoryUI;
     private ItemCollection itemCollection;
+    private GUISlotsManager slotsManager;
+    private PlayerStats playerStats;
 
     // Use this for initialization
     void Start () {
+        playerStats = gameObject.GetComponent<PlayerStats>();
         itemCollection = itemDatabase.GetComponent<ItemCollection>();
+        slotsManager = inventoryUI.transform.GetChild(0).GetChild(0).GetComponent<GUISlotsManager>();
         stacks = new List<Stack>();
-        addItem(0);
-        addItem(1);
-        addItem(1);
-        addItem(1);
-        addItem(0);
+        //addItem(0);
+        //addItem(1);
+        //addItem(1);
+       // addItem(1);
+        //addItem(0);
         printInventory();
     }
 	
@@ -29,6 +34,8 @@ public class InventoryNew : MonoBehaviour {
     public void removeStack(int position)
     {
         stacks.RemoveAt(position);
+        slotsManager.transform.GetChild(position).GetComponent<GUISlotInventory>().setDefaultSprite();
+        slotsManager.mapIcons(stacks);
     }
 
     // remove an item from a stack
@@ -68,12 +75,32 @@ public class InventoryNew : MonoBehaviour {
         if (position == -1)
         {
             stacks.Add(new Stack(itemCollection.itemDictionary[id], 1));
+            slotsManager.mapIcons(stacks);
         }
 
         else
         {
             Stack itemStack = stacks[position];
             itemStack.size++;
+        }
+    }
+
+    public void useItem(int position)
+    {
+        if (position < stacks.Count)
+        {
+            Stack itemStack = stacks[position];
+            Item item = itemStack.item;
+            if (item.type == ItemType.Food)
+            {
+                Food healItem = item.gameItemObject.GetComponent<Food>();
+                playerStats.modifyHunger(healItem.getHungerValue());
+                playerStats.modifyHealth(healItem.getHealthValue());
+                //playerStats.modifyThirst(healItem.getThirstValue());
+
+                removeItem(position);
+                slotsManager.mapIcons(stacks);
+            }
         }
     }
 

@@ -3,11 +3,10 @@ using System.Collections;
 
 public class PlayerPickup : MonoBehaviour {
 
-    public GameObject inventorySystem;
-    private Inventory inventory;
+    private InventoryNew inventory;
 	// Use this for initialization
 	void Start () {
-        inventory = inventorySystem.GetComponent<Inventory>();
+        inventory = gameObject.GetComponent<InventoryNew>();
 	}
 	
 	// Update is called once per frame
@@ -20,7 +19,7 @@ public class PlayerPickup : MonoBehaviour {
         if (collision.gameObject.tag == "Item")
         {
             collision.gameObject.SetActive(false);
-            inventory.addItem(collision.gameObject);
+            inventory.addItem(collision.gameObject.GetComponent<PickableItem>().getId());
         }
     }
 }
