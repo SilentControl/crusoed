@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class GUISlotsManager : MonoBehaviour {
 
     int lastSelected;
-    //public GameObject player;
-    //InventoryNew inventory;
+    public GameObject player;
+    InventoryNew inventory;
+    InfoInventoryUI selectedItemInfo;
     // Use this for initialization
     void Start () {
         lastSelected = -1;
-        //inventory = player.GetComponent<InventoryNew>();
+        inventory = player.GetComponent<InventoryNew>();
+        selectedItemInfo = transform.parent.GetChild(2).GetComponent<InfoInventoryUI>();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +34,20 @@ public class GUISlotsManager : MonoBehaviour {
         {
             transform.GetChild(position).GetComponent<GUISlotInventory>().select();
             lastSelected = position;
+
+            if (position < inventory.stacks.Count)
+            {
+                Stack selectedStack = inventory.stacks[position];
+                Item selectedItem = selectedStack.item;
+
+                string itemInfo = selectedItem.name + " " + selectedItem.description;
+                selectedItemInfo.updateSelectedItemInfo(selectedStack.size, itemInfo);
+            }
+
+            else
+            {
+                selectedItemInfo.updateSelectedItemInfo(0, "");
+            }
         }
 
         else
