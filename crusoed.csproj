@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CraftGUIEnable.cs" />
     <Compile Include="Assets\Scripts\CraftSystem.cs" />
+    <Compile Include="Assets\Scripts\CraftUISlotsManager.cs" />
     <Compile Include="Assets\Scripts\CraftingItem.cs" />
     <Compile Include="Assets\Scripts\Food.cs" />
     <Compile Include="Assets\Scripts\GUIInventory.cs" />
