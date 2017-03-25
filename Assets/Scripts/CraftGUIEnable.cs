@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CraftGUIEnable : MonoBehaviour {
     bool enable = false;
-    GameObject craftGUI;
-	// Use this for initialization
+    // Use this for initialization
+    GameObject background;
 	void Start () {
-        craftGUI = transform.GetChild(0).gameObject;
-        craftGUI.SetActive(enable);
+        background = transform.GetChild(0).gameObject;
+        background.SetActive(enable);
 	}
 	
 	// Update is called once per frame
@@ -15,7 +15,11 @@ public class CraftGUIEnable : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.C))
         {
             enable = !enable;
-            craftGUI.SetActive(enable);
+            if (enable)
+            {
+                //background.transform.GetChild(0).GetComponent<CraftSlotsManager>().mapIcons();
+            }
+            background.SetActive(enable);
             //Debug.Log("Pressed C!\n");
         }
 

@@ -16,6 +16,7 @@ public class Item
     public int id;
     public string description;
     public ItemType type;
+    public bool isCraftable;
 
     public GameObject gameItemObject;
     public Sprite icon;

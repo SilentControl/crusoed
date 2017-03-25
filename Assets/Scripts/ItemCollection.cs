@@ -46,4 +46,24 @@ public class ItemCollection : MonoBehaviour {
             return itemDic;
         }
     }
+
+    private List<Item> craftLst;
+    public List<Item> getCraftList()
+    {
+        if (craftLst == null)
+        {
+            craftLst = new List<Item>();
+            foreach (Item item in Definitions)
+            {
+                if (item.isCraftable == true)
+                {
+                    Debug.Log("#Item Collection " + item.name);
+                    craftLst.Add(item);
+                }
+            }
+        }
+
+        return craftLst;
+    }
+
 }
