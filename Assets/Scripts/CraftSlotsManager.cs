@@ -16,7 +16,6 @@ public class CraftSlotsManager : MonoBehaviour {
         inventory = player.GetComponent<InventoryNew>();
         craftable = itemDatabase.GetComponent<ItemCollection>().getCraftList();
         selectedItemInfo = transform.parent.GetChild(2).GetComponent<InfoCraftUI>();
-        mapIcons();
     }
 	
 	// Update is called once per frame
@@ -27,6 +26,7 @@ public class CraftSlotsManager : MonoBehaviour {
     // select a child slot; deselect the previously selected
     void selectChild(int position)
     {
+        mapIcons();
         //int position = System.Convert.ToInt32(msgPosition);
         if (lastSelected != -1)
         {
@@ -55,16 +55,7 @@ public class CraftSlotsManager : MonoBehaviour {
         int position = 0;
         foreach (Item item in craftable)
         {
-            GUISlotInventory slot = transform.GetChild(position).GetComponent<GUISlotInventory>();//.setSprite(item.icon);
-            //Sprite sprite = new Sprite();
-            //slot.setSprite(sprite);
-            if (slot == null)
-            {
-                Debug.Log("No slot!\n");
-            }
-            Debug.Log(" " + transform.GetChildCount());
-            position++;
-            Debug.Log(item.name);
+           transform.GetChild(position).GetComponent<GUISlotInventory>().setSprite(item.icon);
         }
     }
 
@@ -81,11 +72,12 @@ public class CraftSlotsManager : MonoBehaviour {
 
         CraftRecipe recipe = item.gameItemObject.GetComponent<CraftRecipe>();
 
-        foreach(Stack stack in inventory.stacks)
+        foreach (ItemNo itemReq in recipe.requiredItems)
         {
-            foreach(ItemNo itemReq in recipe.requiredItems)
+            int position = inventory.itemExists(itemReq.id);
+            if (position != -1)
             {
-                if (stack.item.getId() == itemReq.id && stack.size == itemReq.quantity)
+                if (inventory.stacks[position].size == itemReq.quantity)
                 {
                     resourcesFound++;
                 }
@@ -98,5 +90,23 @@ public class CraftSlotsManager : MonoBehaviour {
         }
 
         return enoughResources;
+    }
+
+    public void craftItem(int position)
+    {
+        if (canCraft(craftable[position]))
+        {
+            CraftRecipe recipe = craftable[position].gameItemObject.GetComponent<CraftRecipe>();
+            foreach (ItemNo itemReq in recipe.requiredItems)
+            {
+                int pos = inventory.itemExists(itemReq.id);
+                for (int i = 0; i < itemReq.quantity; i++)
+                {
+                    inventory.removeItem(pos);
+                }
+            }
+
+            inventory.addItem(craftable[position].id);
+        }
     }
 }
