@@ -16,17 +16,18 @@ public class CraftSlotsManager : MonoBehaviour {
         inventory = player.GetComponent<InventoryNew>();
         craftable = itemDatabase.GetComponent<ItemCollection>().getCraftList();
         selectedItemInfo = transform.parent.GetChild(2).GetComponent<InfoCraftUI>();
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        mapIcons();
+    }
 
     // select a child slot; deselect the previously selected
     void selectChild(int position)
     {
-        mapIcons();
+        //mapIcons();
         //int position = System.Convert.ToInt32(msgPosition);
         if (lastSelected != -1)
         {
@@ -55,6 +56,7 @@ public class CraftSlotsManager : MonoBehaviour {
         int position = 0;
         foreach (Item item in craftable)
         {
+           Debug.Log(item.name);
            transform.GetChild(position).GetComponent<GUISlotInventory>().setSprite(item.icon);
         }
     }

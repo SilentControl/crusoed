@@ -88,10 +88,12 @@
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\PlayerPickup.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\SetFire.cs" />
     <Compile Include="Assets\Scripts\Tool.cs" />
+    <Compile Include="Assets\Scripts\TreeCut.cs" />
     <Compile Include="Assets\Scripts\UseItemUI.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\SetFire.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GroupLayer.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
@@ -108,7 +110,6 @@
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
-    <Compile Include="Assets\TreeCut.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />

@@ -12,6 +12,7 @@ public class ItemNo
 
 
 public class CraftRecipe : MonoBehaviour {
+    public playerPlace place;
     public List<ItemNo> requiredItems;
 	// Use this for initialization
 	void Start () {

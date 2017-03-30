@@ -2,6 +2,47 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum itemEnum
+{
+    CARROT,
+    CHERRY,
+    EGGPLANT,
+    LEMON,
+    LIME,
+    MUSHROOM,
+    WATERMELON,
+    STONE,
+    STICK,
+    APPLE,
+    BANANA,
+    PEAR,
+    TOMATO,
+    PUMPKIN,
+    WATER,
+    RAWMEAT,
+    COOKEDMEAT,
+    LEMONADE,
+    LIMEONADE,
+    RAWFISH,
+    COOKEDFISH,
+    IRON,
+    LIANA,
+    FIRE,
+    AXE,
+    SPEAR,
+    HAMMER,
+    SHOVEL,
+    PICKAXE,
+    SWORD,
+    STEEL,
+    SPRINGKEY,
+    SUMMERKEY,
+    AUTUMNKEY,
+    WINTERKEY,
+    JACKOLANTERN
+}
+
+
 public class InventoryNew : MonoBehaviour {
 
     public List<Stack> stacks;
