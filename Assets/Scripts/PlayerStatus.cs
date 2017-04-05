@@ -7,6 +7,7 @@ public enum playerPlace
     onLitFirePlace,
     onUnlitFirePlace,
     onWater,
+    nearTree,
     onSpecialForge
 }
 
@@ -22,4 +23,9 @@ public class PlayerStatus : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void setStatus(playerPlace newPlace)
+    {
+        status = newPlace;
+    }
 }

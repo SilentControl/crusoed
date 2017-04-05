@@ -41,6 +41,7 @@ public class SetFire : MonoBehaviour {
         {
             nearFireCamp = true;
             player = other;
+            player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onUnlitFirePlace);
             // set player status on fire for cook
         }
     }
@@ -50,6 +51,7 @@ public class SetFire : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             nearFireCamp = false;
+            player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.idle);
             player = null;
         }
     }

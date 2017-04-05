@@ -38,6 +38,7 @@ public class TreeCut : MonoBehaviour
         {
             nearTree = true;
             player = other;
+            player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.nearTree);
         }
     }
 
@@ -46,6 +47,7 @@ public class TreeCut : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             nearTree = false;
+            player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.idle);
             player = null;
         }
     }
