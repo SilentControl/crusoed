@@ -57,7 +57,7 @@ public class ItemCollection : MonoBehaviour {
             {
                 if (item.isCraftable == true)
                 {
-                    Debug.Log("#Item Collection " + item.name);
+                    //Debug.Log("#Item Collection " + item.name);
                     craftLst.Add(item);
                 }
             }

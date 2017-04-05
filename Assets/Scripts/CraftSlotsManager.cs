@@ -56,8 +56,8 @@ public class CraftSlotsManager : MonoBehaviour {
         int position = 0;
         foreach (Item item in craftable)
         {
-           Debug.Log(item.name);
            transform.GetChild(position).GetComponent<GUISlotInventory>().setSprite(item.icon);
+           position++;
         }
     }
 

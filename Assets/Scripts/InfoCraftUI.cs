@@ -22,7 +22,7 @@ public class InfoCraftUI : MonoBehaviour {
 
     public void updateSelectedItemInfo(Item craftable, bool enoughRes, bool selected)
     {
-        if (selected == false)
+        /*if (selected == false)
         {
             description.text = "";
             reqItem1.text = "";
@@ -46,6 +46,6 @@ public class InfoCraftUI : MonoBehaviour {
             {
                 canCraft.text = "Can Craft: No";
             }
-        }
+        }*/
     }
 }

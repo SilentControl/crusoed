@@ -4,10 +4,12 @@ using System.Collections;
 public class InventoryUIEnable : MonoBehaviour {
     bool enable = false;
     GameObject inventoryUI;
+    GUISlotsManager manager;
     // Use this for initialization
     void Start () {
         inventoryUI = transform.GetChild(0).gameObject;
         inventoryUI.SetActive(enable);
+        manager = transform.GetChild(0).GetChild(0).GetComponent<GUISlotsManager>();
     }
 	
 	// Update is called once per frame
@@ -16,6 +18,7 @@ public class InventoryUIEnable : MonoBehaviour {
         {
             enable = !enable;
             inventoryUI.SetActive(enable);
+            manager.mapIcons(manager.inventory.stacks);
             //Debug.Log("Pressed C!\n");
         }
     }

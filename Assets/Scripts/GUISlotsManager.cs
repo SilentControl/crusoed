@@ -7,7 +7,7 @@ public class GUISlotsManager : MonoBehaviour {
 
     int lastSelected;
     public GameObject player;
-    InventoryNew inventory;
+    public InventoryNew inventory;
     InfoInventoryUI selectedItemInfo;
     // Use this for initialization
     void Start () {
@@ -64,6 +64,11 @@ public class GUISlotsManager : MonoBehaviour {
         {
             transform.GetChild(position).GetComponent<GUISlotInventory>().setSprite(stackItem.item.icon);
             position++;
+        }
+
+        for(int i = position; i <= 20; i++)
+        {
+            transform.GetChild(position).GetComponent<GUISlotInventory>().setDefaultSprite();
         }
     }
 

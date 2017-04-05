@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CraftGUIEnable : MonoBehaviour {
-    bool enable = false;
+    bool enable = true;
     // Use this for initialization
     GameObject background;
 	void Start () {
