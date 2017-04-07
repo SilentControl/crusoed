@@ -21,8 +21,7 @@ public class PickableItem : MonoBehaviour {
 
     // Update is called once per frame
     void Update ()
-    {
-	
+	{
 	}
 
     public int getId()
