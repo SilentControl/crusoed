@@ -76,10 +76,11 @@ public class CraftSlotsManager : MonoBehaviour {
 
         foreach (ItemNo itemReq in recipe.requiredItems)
         {
+			
             int position = inventory.itemExists(itemReq.id);
             if (position != -1)
             {
-                if (inventory.stacks[position].size == itemReq.quantity)
+                if (inventory.stacks[position].size >= itemReq.quantity)
                 {
                     resourcesFound++;
                 }

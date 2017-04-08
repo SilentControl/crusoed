@@ -8,6 +8,7 @@ public enum playerPlace
     onUnlitFirePlace,
     onWater,
     nearTree,
+	nearRock,
     onSpecialForge
 }
 

@@ -45,7 +45,7 @@ public class PlayerStats : MonoBehaviour
     void FixedUpdate ()
     {
         ticks++;
-        if (ticks % 100 == 0)
+        if (ticks % 300 == 0)
         {
             hunger++;
             thirst += 2;
