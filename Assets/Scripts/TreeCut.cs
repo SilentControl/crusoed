@@ -19,12 +19,14 @@ public class TreeCut : MonoBehaviour
         {
             if (nearTree == true && player != null)
             {
-                Debug.Log("Here1");
                 InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
                 if (inventory.itemExists((int)itemEnum.AXE) != -1)
                 {
-                    Debug.Log("Here ");
-                    player.gameObject.GetComponent<InventoryNew>().addItem(8);
+					int rand = Random.Range (0, 10);
+					if (rand % 2 == 0)
+						player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.STICK);
+					else
+						player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.LIANA);
                 }
             }
         }

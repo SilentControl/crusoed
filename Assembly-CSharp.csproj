@@ -53,9 +53,12 @@
      <Compile Include="Assets\Scripts\CraftSystem.cs" />
      <Compile Include="Assets\Scripts\CraftUISlotsManager.cs" />
      <Compile Include="Assets\Scripts\CraftingItem.cs" />
+     <Compile Include="Assets\Scripts\DamagePlayer.cs" />
+     <Compile Include="Assets\Scripts\DamagePlayerOnCol.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
      <Compile Include="Assets\Scripts\FirePuzzle.cs" />
      <Compile Include="Assets\Scripts\FirePuzzleCampFire.cs" />
+     <Compile Include="Assets\Scripts\Fishing.cs" />
      <Compile Include="Assets\Scripts\Food.cs" />
      <Compile Include="Assets\Scripts\GUIInventory.cs" />
      <Compile Include="Assets\Scripts\GUISlotInventory.cs" />
@@ -106,6 +109,7 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
      <None Include="Assets\Tiled2Unity\Imported\interm-island.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\summer-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\main2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />

@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FirePuzzle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Fishing.cs">
     <Files>
-      <File FileName="Assets\Scripts\MineRock.cs" Line="37" Column="81" />
-      <File FileName="Assets\Scripts\TreeCut.cs" Line="35" Column="1" />
-      <File FileName="Assets\Scripts\PlayerStatus.cs" Line="20" Column="33" />
-      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="104" Column="14" />
-      <File FileName="Assets\Scripts\CraftItemUI.cs" Line="5" Column="44" />
+      <File FileName="Assets\Scripts\MineRock.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerStatus.cs" Line="12" Column="15" />
+      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CraftItemUI.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FirePuzzle.cs" Line="32" Column="45" />
-      <File FileName="Assets\Scripts\FirePuzzleCampFire.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\FirePuzzleCampFire.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TreeCut.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\Fishing.cs" Line="32" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

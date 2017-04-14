@@ -39,7 +39,8 @@ public enum itemEnum
     SUMMERKEY,
     AUTUMNKEY,
     WINTERKEY,
-    JACKOLANTERN
+    JACKOLANTERN,
+	ROD
 }
 
 

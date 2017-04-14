@@ -65,6 +65,7 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
      <None Include="Assets\Tiled2Unity\Imported\interm-island.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\summer-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\main2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
