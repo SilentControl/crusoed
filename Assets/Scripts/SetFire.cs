@@ -26,8 +26,8 @@ public class SetFire : MonoBehaviour {
                 if (stickPosition != -1 && rockPosition!= -1 && inventory.stacks[rockPosition].size >= 2)
                 {
                     inventory.removeItem(stickPosition);
-                    inventory.removeItem(rockPosition);
-                    inventory.removeItem(rockPosition);
+					inventory.removeItem(inventory.itemExists((int)itemEnum.STONE));
+					inventory.removeItem(inventory.itemExists((int)itemEnum.STONE));
                     isOnFire = true;
                     animator.SetBool("isOnFire", isOnFire);
                 }

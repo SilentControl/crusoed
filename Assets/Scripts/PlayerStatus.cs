@@ -10,6 +10,7 @@ public enum playerPlace
     nearTree,
 	nearRock,
 	nearFishSpot,
+	nearAnvil,
     onSpecialForge
 }
 

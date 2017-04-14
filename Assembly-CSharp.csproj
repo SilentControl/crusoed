@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AddFishPuzzle.cs" />
+     <Compile Include="Assets\Scripts\AnvilSmith.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CraftGUIEnable.cs" />
      <Compile Include="Assets\Scripts\CraftItemUI.cs" />
@@ -55,9 +57,11 @@
      <Compile Include="Assets\Scripts\CraftingItem.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\DamagePlayerOnCol.cs" />
+     <Compile Include="Assets\Scripts\ExcalliburEvent.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
      <Compile Include="Assets\Scripts\FirePuzzle.cs" />
      <Compile Include="Assets\Scripts\FirePuzzleCampFire.cs" />
+     <Compile Include="Assets\Scripts\FishPuzzle.cs" />
      <Compile Include="Assets\Scripts\Fishing.cs" />
      <Compile Include="Assets\Scripts\Food.cs" />
      <Compile Include="Assets\Scripts\GUIInventory.cs" />
