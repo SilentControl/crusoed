@@ -40,7 +40,8 @@ public enum itemEnum
     AUTUMNKEY,
     WINTERKEY,
     JACKOLANTERN,
-	ROD
+	ROD,
+	REPAIRBRIDGE
 }
 
 
