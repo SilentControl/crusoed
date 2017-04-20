@@ -1,20 +1,24 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GraveDig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CraftSlotsManager.cs">
     <Files>
       <File FileName="Assets\Scripts\MineRock.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerStatus.cs" Line="14" Column="13" />
-      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="59" Column="1" />
+      <File FileName="Assets\Scripts\PlayerStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="77" Column="1" />
       <File FileName="Assets\Scripts\CraftItemUI.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fishing.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ExcalliburEvent.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TreeCut.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AddFishPuzzle.cs" Line="38" Column="1" />
+      <File FileName="Assets\Scripts\AddFishPuzzle.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ItemCollection.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FirePuzzle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AnvilSmith.cs" Line="15" Column="1" />
-      <File FileName="Assets\Scripts\FishPuzzle.cs" Line="21" Column="1" />
-      <File FileName="Assets\Scripts\GraveDig.cs" Line="16" Column="39" />
+      <File FileName="Assets\Scripts\FishPuzzle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GraveDig.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AnvilSmith.cs" Line="45" Column="1" />
+      <File FileName="Assets\Scripts\CrystalAdd.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SetFire.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FireDemonPuzzle.cs" Line="40" Column="34" />
+      <File FileName="Assets\Scripts\RequireItem.cs" Line="20" Column="86" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

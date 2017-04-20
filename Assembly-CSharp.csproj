@@ -55,10 +55,12 @@
      <Compile Include="Assets\Scripts\CraftSystem.cs" />
      <Compile Include="Assets\Scripts\CraftUISlotsManager.cs" />
      <Compile Include="Assets\Scripts\CraftingItem.cs" />
+     <Compile Include="Assets\Scripts\CrystalAdd.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\DamagePlayerOnCol.cs" />
      <Compile Include="Assets\Scripts\ExcalliburEvent.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
+     <Compile Include="Assets\Scripts\FireDemonPuzzle.cs" />
      <Compile Include="Assets\Scripts\FirePuzzle.cs" />
      <Compile Include="Assets\Scripts\FirePuzzleCampFire.cs" />
      <Compile Include="Assets\Scripts\FishPuzzle.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\Scripts\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\PopUp.cs" />
      <Compile Include="Assets\Scripts\RepairBridge.cs" />
+     <Compile Include="Assets\Scripts\RequireItem.cs" />
      <Compile Include="Assets\Scripts\ScareCrowPuzzle.cs" />
      <Compile Include="Assets\Scripts\SetFire.cs" />
      <Compile Include="Assets\Scripts\Tool.cs" />
@@ -122,6 +125,7 @@
      <None Include="Assets\Tiled2Unity\Imported\main2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\winter.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\spring-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
