@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AddFishPuzzle.cs" />
      <Compile Include="Assets\Scripts\AnvilSmith.cs" />
+     <Compile Include="Assets\Scripts\BonusChest.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CraftGUIEnable.cs" />
      <Compile Include="Assets\Scripts\CraftItemUI.cs" />
