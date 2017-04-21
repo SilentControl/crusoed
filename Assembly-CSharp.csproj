@@ -124,6 +124,7 @@
      <None Include="Assets\Tiled2Unity\Imported\interm-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\summer-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\main2.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\new-main-island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\winter.tiled2unity.xml" />
@@ -132,6 +133,7 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
      <None Include="Assets\Tiled2Unity\License.txt" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\main_island.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
