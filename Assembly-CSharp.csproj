@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\InventoryUIEnable.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemCollection.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MineRock.cs" />
      <Compile Include="Assets\Scripts\Misc.cs" />
      <Compile Include="Assets\Scripts\PickableItem.cs" />
