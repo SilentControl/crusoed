@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\AnvilSmith.cs" />
      <Compile Include="Assets\Scripts\BonusChest.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\ChestReveal.cs" />
      <Compile Include="Assets\Scripts\CraftGUIEnable.cs" />
      <Compile Include="Assets\Scripts\CraftItemUI.cs" />
      <Compile Include="Assets\Scripts\CraftRecipe.cs" />

@@ -7,11 +7,18 @@ public class PlayerStats : MonoBehaviour
     public int hunger;
     public int thirst;
     public int ticks;
+	public int deaths;
+
+	const float spawnPointX = 82.0f;
+	const float spawnPointY = -131.0f;
+	Vector3 checkpoint;
 	// Use this for initialization
 	void Start ()
     {
         health = 100;
         hunger = thirst = ticks = 0;
+		deaths = 0;
+		checkpoint = new Vector3 (spawnPointX, spawnPointY, 0.0f);
 	}
 
     public void modifyHealth(int value)
@@ -48,7 +55,7 @@ public class PlayerStats : MonoBehaviour
         if (ticks % 300 == 0)
         {
             hunger++;
-            thirst += 2;
+            thirst++;
 
             if (hunger >= 100)
             {
@@ -61,6 +68,15 @@ public class PlayerStats : MonoBehaviour
                 health -= 2;
                 thirst = 100;
             }
+
+			// the player dies
+			if (health <= 0)
+			{
+				deaths++;
+				gameObject.transform.position = checkpoint;
+				health = 100;
+				thirst = hunger = 0;
+			}
         }
 	}
 }
