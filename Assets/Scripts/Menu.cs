@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour {
 		Debug.Log ("Loaded!");
 		//SceneManager.LoadScene (scenePaths[0], LoadSceneMode.Single);
 		Debug.Log ("Loaded!");
-		Application.LoadLevel (1);
+		Application.LoadLevel (2);
 	}
 
 	public void quit()

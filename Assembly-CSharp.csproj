@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AddFishPuzzle.cs" />
      <Compile Include="Assets\Scripts\AnvilSmith.cs" />
+     <Compile Include="Assets\Scripts\BoatMove.cs" />
      <Compile Include="Assets\Scripts\BonusChest.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ChestReveal.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets\Scripts\PopUp.cs" />
      <Compile Include="Assets\Scripts\RepairBridge.cs" />
      <Compile Include="Assets\Scripts\RequireItem.cs" />
+     <Compile Include="Assets\Scripts\RockBoatCollision.cs" />
      <Compile Include="Assets\Scripts\ScareCrowPuzzle.cs" />
      <Compile Include="Assets\Scripts\SetFire.cs" />
      <Compile Include="Assets\Scripts\Tool.cs" />
