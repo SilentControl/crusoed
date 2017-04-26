@@ -5,6 +5,7 @@ public class Food : MonoBehaviour {
 
     public int healthValue;
     public int hungerValue;
+	public int thirstValue;
     public string foodName;
 
 	// Use this for initialization
@@ -20,6 +21,11 @@ public class Food : MonoBehaviour {
     {
         return hungerValue;
     }
+
+	public int getThirstValue()
+	{
+		return thirstValue;
+	}
 
 
     // Update is called once per frame

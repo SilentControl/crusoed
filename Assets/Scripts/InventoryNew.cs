@@ -146,7 +146,7 @@ public class InventoryNew : MonoBehaviour {
                 Food healItem = item.gameItemObject.GetComponent<Food>();
                 playerStats.modifyHunger(healItem.getHungerValue());
                 playerStats.modifyHealth(healItem.getHealthValue());
-                //playerStats.modifyThirst(healItem.getThirstValue());
+                playerStats.modifyThirst(healItem.getThirstValue());
 
                 removeItem(position);
                 slotsManager.mapIcons(stacks);
