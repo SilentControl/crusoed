@@ -6,6 +6,8 @@ public class Menu : MonoBehaviour {
 	private AssetBundle myLoadedAssetBundle;
 	private string[] scenePaths;
 
+	public GameObject currentScene;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,5 +31,10 @@ public class Menu : MonoBehaviour {
 	public void quit()
 	{
 		Application.Quit();
+	}
+
+	public void resume()
+	{
+		Destroy (currentScene);
 	}
 }
