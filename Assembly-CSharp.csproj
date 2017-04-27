@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\CrystalAdd.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\DamagePlayerOnCol.cs" />
+     <Compile Include="Assets\Scripts\EndingLoadMenu.cs" />
      <Compile Include="Assets\Scripts\ExcalliburEvent.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
      <Compile Include="Assets\Scripts\FireDemonPuzzle.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\RepairBridge.cs" />
      <Compile Include="Assets\Scripts\RequireItem.cs" />
      <Compile Include="Assets\Scripts\RockBoatCollision.cs" />
+     <Compile Include="Assets\Scripts\RocketFly.cs" />
      <Compile Include="Assets\Scripts\ScareCrowPuzzle.cs" />
      <Compile Include="Assets\Scripts\SetFire.cs" />
      <Compile Include="Assets\Scripts\Tool.cs" />

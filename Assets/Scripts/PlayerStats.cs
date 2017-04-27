@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerStats : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerStats : MonoBehaviour
     public int thirst;
     public int ticks;
 	public int deaths;
+
+	public GameObject deathCounter;
 
 	const float spawnPointX = 82.0f;
 	const float spawnPointY = -131.0f;
@@ -76,6 +79,7 @@ public class PlayerStats : MonoBehaviour
 				gameObject.transform.position = checkpoint;
 				health = 100;
 				thirst = hunger = 0;
+				deathCounter.transform.GetChild(0).GetComponent<Text> ().text = "Deaths: " + deaths;
 			}
         }
 	}

@@ -141,16 +141,23 @@ public class InventoryNew : MonoBehaviour {
         {
             Stack itemStack = stacks[position];
             Item item = itemStack.item;
-            if (item.type == ItemType.Food)
-            {
-                Food healItem = item.gameItemObject.GetComponent<Food>();
-                playerStats.modifyHunger(healItem.getHungerValue());
-                playerStats.modifyHealth(healItem.getHealthValue());
-                playerStats.modifyThirst(healItem.getThirstValue());
+			if (item.type == ItemType.Food) {
+				Food healItem = item.gameItemObject.GetComponent<Food> ();
+				playerStats.modifyHunger (healItem.getHungerValue ());
+				playerStats.modifyHealth (healItem.getHealthValue ());
+				playerStats.modifyThirst (healItem.getThirstValue ());
 
-                removeItem(position);
-                slotsManager.mapIcons(stacks);
-            }
+				removeItem (position);
+				slotsManager.mapIcons (stacks);
+			} else {
+				if (item.getId () == (int)itemEnum.AIRPLANE)
+				{
+					GameObject airplane = Instantiate (item.gameItemObject);
+					airplane.transform.position = new Vector3 (gameObject.transform.position.x,
+						gameObject.transform.position.y + 10.0f, gameObject.transform.position.z);
+					Debug.Log ("WON!");
+				}
+			}
         }
     }
 
