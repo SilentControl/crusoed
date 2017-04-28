@@ -30,6 +30,7 @@ public class SetFire : MonoBehaviour {
 					inventory.removeItem(inventory.itemExists((int)itemEnum.STONE));
                     isOnFire = true;
                     animator.SetBool("isOnFire", isOnFire);
+					player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onLitFirePlace);
                 }
             }
         }
@@ -41,7 +42,11 @@ public class SetFire : MonoBehaviour {
         {
             nearFireCamp = true;
             player = other;
-            player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onUnlitFirePlace);
+
+			if (isOnFire == false)
+            	player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onUnlitFirePlace);
+			else
+				player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onLitFirePlace);
             // set player status on fire for cook
         }
     }

@@ -16,7 +16,7 @@ public enum playerPlace
 }
 
 public class PlayerStatus : MonoBehaviour {
-    playerPlace status;
+	public playerPlace status;
 
 	// Use this for initialization
 	void Start () {
@@ -32,4 +32,9 @@ public class PlayerStatus : MonoBehaviour {
     {
         status = newPlace;
     }
+
+	public playerPlace getStatus()
+	{
+		return status;
+	}
 }

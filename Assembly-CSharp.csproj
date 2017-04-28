@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\CrystalAdd.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\DamagePlayerOnCol.cs" />
+     <Compile Include="Assets\Scripts\DayNight.cs" />
      <Compile Include="Assets\Scripts\EndingLoadMenu.cs" />
      <Compile Include="Assets\Scripts\ExcalliburEvent.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
@@ -90,6 +91,7 @@
      <Compile Include="Assets\Scripts\PickableItem.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\PlayerPickup.cs" />
+     <Compile Include="Assets\Scripts\PlayerSleep.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\PopUp.cs" />
