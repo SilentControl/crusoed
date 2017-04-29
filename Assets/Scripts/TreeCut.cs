@@ -5,11 +5,13 @@ public class TreeCut : MonoBehaviour
 {
     public bool nearTree;
     public Collider2D player;
+	bool timeout;
     // Use this for initialization
     void Start()
     {
         nearTree = false;
         player = null;
+		timeout = false;
     }
 
     // Update is called once per frame
@@ -17,7 +19,7 @@ public class TreeCut : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.E))
         {
-            if (nearTree == true && player != null)
+			if (nearTree == true && player != null && timeout == false)
             {
                 InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
                 if (inventory.itemExists((int)itemEnum.AXE) != -1)
@@ -27,6 +29,9 @@ public class TreeCut : MonoBehaviour
 						player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.STICK);
 					else
 						player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.LIANA);
+
+					timeout = true;
+					StartCoroutine (DelayCollect ());
                 }
             }
         }
@@ -53,4 +58,10 @@ public class TreeCut : MonoBehaviour
             player = null;
         }
     }
+
+	IEnumerator DelayCollect()
+	{
+		yield return new WaitForSecondsRealtime (1.5f);
+		timeout = false;
+	}
 }

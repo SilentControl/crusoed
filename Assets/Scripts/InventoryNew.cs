@@ -60,10 +60,11 @@ public class InventoryNew : MonoBehaviour {
     private ItemCollection itemCollection;
     private GUISlotsManager slotsManager;
     private PlayerStats playerStats;
-
+	private ActionBubble actionBubble;
     // Use this for initialization
     void Start () {
         playerStats = gameObject.GetComponent<PlayerStats>();
+		actionBubble = gameObject.GetComponent<ActionBubble> ();
         itemCollection = itemDatabase.GetComponent<ItemCollection>();
         slotsManager = inventoryUI.transform.GetChild(0).GetChild(0).GetComponent<GUISlotsManager>();
         stacks = new List<Stack>();
@@ -133,6 +134,8 @@ public class InventoryNew : MonoBehaviour {
             Stack itemStack = stacks[position];
             itemStack.size++;
         }
+
+		actionBubble.showBubble (itemCollection.itemDictionary [id].icon);
     }
 
     public void useItem(int position)

@@ -5,11 +5,13 @@ public class MineRock : MonoBehaviour {
 
 	public bool nearRock;
 	public Collider2D player;
+	bool timeout;
 	// Use this for initialization
 	void Start()
 	{
 		nearRock = false;
 		player = null;
+		timeout = false;
 	}
 	
 	// Update is called once per frame
@@ -17,13 +19,16 @@ public class MineRock : MonoBehaviour {
 	{
 		if (Input.GetKeyUp(KeyCode.E))
 		{
-			if (nearRock == true && player != null)
+			if (nearRock == true && player != null && timeout == false)
 			{
 				InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
 				if (inventory.itemExists((int)itemEnum.PICKAXE) != -1)
 				{
 					player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.STONE);
 				}
+
+				timeout = true;
+				StartCoroutine (DelayCollect ());
 			}
 		}
 	}
@@ -46,5 +51,11 @@ public class MineRock : MonoBehaviour {
 			player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.idle);
 			player = null;
 		}
+	}
+
+	IEnumerator DelayCollect()
+	{
+		yield return new WaitForSecondsRealtime (1.5f);
+		timeout = false;
 	}
 }

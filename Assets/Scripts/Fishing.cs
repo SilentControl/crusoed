@@ -6,11 +6,13 @@ public class Fishing : MonoBehaviour {
 	public int ironSupply;
 	public bool nearSpot;
 	public Collider2D player;
+	bool timeout;
 	// Use this for initialization
 	void Start()
 	{
 		nearSpot = false;
 		player = null;
+		timeout = false;
 	}
 
 	// Update is called once per frame
@@ -18,7 +20,7 @@ public class Fishing : MonoBehaviour {
 	{
 		if (Input.GetKeyUp(KeyCode.E))
 		{
-			if (nearSpot == true && player != null)
+			if (nearSpot == true && player != null && timeout == false)
 			{
 				InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
 				if (inventory.itemExists((int)itemEnum.ROD) != -1)
@@ -34,6 +36,9 @@ public class Fishing : MonoBehaviour {
 					} else {
 						player.gameObject.GetComponent<InventoryNew> ().addItem ((int)itemEnum.RAWFISH);
 					}
+
+					timeout = true;
+					StartCoroutine (DelayCollect ());
 				}
 			}
 		}
@@ -59,5 +64,11 @@ public class Fishing : MonoBehaviour {
 			player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.idle);
 			player = null;
 		}
+	}
+
+	IEnumerator DelayCollect()
+	{
+		yield return new WaitForSecondsRealtime (1.5f);
+		timeout = false;
 	}
 }

@@ -47,7 +47,6 @@ public class SetFire : MonoBehaviour {
             	player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onUnlitFirePlace);
 			else
 				player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onLitFirePlace);
-            // set player status on fire for cook
         }
     }
 

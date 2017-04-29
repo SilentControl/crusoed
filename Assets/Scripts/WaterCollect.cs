@@ -4,20 +4,24 @@ using System.Collections;
 public class WaterCollect : MonoBehaviour {
     public bool nearWater;
     public Collider2D player;
+	bool timeout;
     // Use this for initialization
     void Start () {
         nearWater = false;
         player = null;
+		timeout = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.E))
         {
-            if (nearWater== true && player != null)
+			if (nearWater== true && player != null && timeout == false)
             {
                 InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
-                player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.WATER);
+                inventory.addItem((int)itemEnum.WATER);
+				timeout = true;
+				StartCoroutine (DelayCollect ());
             }
         }
     }
@@ -41,4 +45,10 @@ public class WaterCollect : MonoBehaviour {
             player = null;
         }
     }
+
+	IEnumerator DelayCollect()
+	{
+		yield return new WaitForSecondsRealtime (1.5f);
+		timeout = false;
+	}
 }

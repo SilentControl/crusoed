@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActionBubble.cs" />
      <Compile Include="Assets\Scripts\AddFishPuzzle.cs" />
      <Compile Include="Assets\Scripts\AnvilSmith.cs" />
      <Compile Include="Assets\Scripts\BoatMove.cs" />
