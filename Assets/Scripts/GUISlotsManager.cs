@@ -40,7 +40,7 @@ public class GUISlotsManager : MonoBehaviour {
                 Stack selectedStack = inventory.stacks[position];
                 Item selectedItem = selectedStack.item;
 
-                string itemInfo = selectedItem.name + " " + selectedItem.description;
+                string itemInfo = selectedItem.name + "\n" + selectedItem.description;
                 selectedItemInfo.updateSelectedItemInfo(selectedStack.size, itemInfo);
             }
 
