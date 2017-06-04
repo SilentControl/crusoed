@@ -14,7 +14,7 @@ public class BoatMove : MonoBehaviour {
 
 	IEnumerator Waiter()
 	{
-		yield return new WaitForSecondsRealtime (2);
+		yield return new WaitForSecondsRealtime (0.7f);
 		Application.LoadLevel (1);
 	}
 	// Use this for initialization
