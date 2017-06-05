@@ -20,6 +20,7 @@ public class WaterCollect : MonoBehaviour {
             {
                 InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
                 inventory.addItem((int)itemEnum.WATER);
+				player.transform.GetChild (2).GetChild (5).GetComponent<AudioSource> ().Play ();
 				timeout = true;
 				StartCoroutine (DelayCollect ());
             }

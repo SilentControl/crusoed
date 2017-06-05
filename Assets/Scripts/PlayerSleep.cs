@@ -6,6 +6,7 @@ public class PlayerSleep : MonoBehaviour {
 	// Use this for initialization
 	public GameObject sun;
 	public GameObject sleepUI;
+	public AudioSource snore;
 
 	DayNight sunLight;
 	PlayerStats stats;
@@ -25,6 +26,7 @@ public class PlayerSleep : MonoBehaviour {
 			// set the time to morning
 			sunLight.goMorning ();
 
+			snore.Play ();
 			// show the ZZZ... screen
 			StartCoroutine (Wait ());
 

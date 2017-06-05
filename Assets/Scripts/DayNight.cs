@@ -44,5 +44,6 @@ public class DayNight : MonoBehaviour {
 	public void goMorning()
 	{
 		sun.intensity = 0.79f;
+		increaseLight = true;
 	}
 }

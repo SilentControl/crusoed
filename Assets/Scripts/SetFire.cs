@@ -37,6 +37,7 @@ public class SetFire : MonoBehaviour {
                     isOnFire = true;
                     animator.SetBool("isOnFire", isOnFire);
 					player.gameObject.GetComponent<PlayerStatus>().setStatus(playerPlace.onLitFirePlace);
+					player.transform.GetChild (2).GetChild (3).GetComponent<AudioSource> ().Play ();
 					light.SetActive (true);
 					particles.SetActive (true);
                 }

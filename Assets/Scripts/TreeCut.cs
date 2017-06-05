@@ -30,6 +30,8 @@ public class TreeCut : MonoBehaviour
 					else
 						player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.LIANA);
 
+					player.transform.GetChild (2).GetChild (2).GetComponent<AudioSource> ().Play ();
+
 					timeout = true;
 					StartCoroutine (DelayCollect ());
                 }

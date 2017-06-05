@@ -61,6 +61,8 @@ public class InventoryNew : MonoBehaviour {
     private GUISlotsManager slotsManager;
     private PlayerStats playerStats;
 	private ActionBubble actionBubble;
+	public AudioSource pickup;
+	public AudioSource pickupKey;
     // Use this for initialization
     void Start () {
         playerStats = gameObject.GetComponent<PlayerStats>();
@@ -136,6 +138,10 @@ public class InventoryNew : MonoBehaviour {
         }
 
 		actionBubble.showBubble (itemCollection.itemDictionary [id].icon);
+		if (id == (int)itemEnum.SPRINGKEY || id == (int)itemEnum.SUMMERKEY || id == (int)itemEnum.AUTUMNKEY || id == (int)itemEnum.WINTERKEY)
+			pickupKey.Play ();
+		else
+			pickup.Play ();
     }
 
     public void useItem(int position)

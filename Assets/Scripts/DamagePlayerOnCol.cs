@@ -18,6 +18,7 @@ public class DamagePlayerOnCol : MonoBehaviour {
 		if (coll.gameObject.tag == "Player")
 		{
 			coll.gameObject.GetComponent<PlayerStats> ().modifyHealth (-damage);
+			coll.gameObject.transform.GetChild (2).GetChild (4).GetComponent<AudioSource> ().Play ();
 		}
 	}
 }

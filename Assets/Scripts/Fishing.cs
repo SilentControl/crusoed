@@ -38,6 +38,7 @@ public class Fishing : MonoBehaviour {
 					}
 
 					timeout = true;
+					player.transform.GetChild (2).GetChild (5).GetComponent<AudioSource> ().Play ();
 					StartCoroutine (DelayCollect ());
 				}
 			}
