@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InventoryNew.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IntroCameraMove.cs">
     <Files>
       <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ChestReveal.cs" Line="1" Column="1" />
@@ -8,14 +8,15 @@
       <File FileName="Assets\Scripts\BoatMove.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Menu.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Pause.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SetFire.cs" Line="14" Column="30" />
-      <File FileName="Assets\Scripts\BackgroundMusic.cs" Line="36" Column="20" />
-      <File FileName="Assets\Scripts\TreeCut.cs" Line="33" Column="6" />
-      <File FileName="Assets\Scripts\DamagePlayer.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\DamagePlayerOnCol.cs" Line="20" Column="72" />
-      <File FileName="Assets\Scripts\WaterCollect.cs" Line="23" Column="46" />
-      <File FileName="Assets\Scripts\Fishing.cs" Line="41" Column="47" />
-      <File FileName="Assets\Scripts\InventoryNew.cs" Line="144" Column="10" />
+      <File FileName="Assets\Scripts\SetFire.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BackgroundMusic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TreeCut.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DamagePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DamagePlayerOnCol.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WaterCollect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Fishing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InventoryNew.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\IntroCameraMove.cs" Line="5" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
