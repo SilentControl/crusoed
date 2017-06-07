@@ -79,7 +79,7 @@ public class PlayerStats : MonoBehaviour
 				gameObject.transform.position = checkpoint;
 				health = 100;
 				thirst = hunger = 0;
-				deathCounter.transform.GetChild(0).GetComponent<Text> ().text = "Deaths: " + deaths;
+				deathCounter.transform.GetChild(0).GetComponent<Text> ().text = ": " + deaths;
 			}
         }
 	}

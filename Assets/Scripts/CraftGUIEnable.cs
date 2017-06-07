@@ -8,6 +8,8 @@ public class CraftGUIEnable : MonoBehaviour {
 	void Start () {
         background = transform.GetChild(0).gameObject;
         background.SetActive(enable);
+		enable = !enable;
+		background.SetActive(enable);
 	}
 	
 	// Update is called once per frame

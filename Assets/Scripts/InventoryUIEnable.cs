@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class InventoryUIEnable : MonoBehaviour {
-    bool enable = false;
+    bool enable = true;
     GameObject inventoryUI;
     GUISlotsManager manager;
     // Use this for initialization
@@ -19,7 +19,6 @@ public class InventoryUIEnable : MonoBehaviour {
             enable = !enable;
             inventoryUI.SetActive(enable);
             manager.mapIcons(manager.inventory.stacks);
-            //Debug.Log("Pressed C!\n");
         }
     }
 }
