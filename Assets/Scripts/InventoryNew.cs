@@ -162,9 +162,7 @@ public class InventoryNew : MonoBehaviour {
 				if (item.getId () == (int)itemEnum.AIRPLANE)
 				{
 					GameObject airplane = Instantiate (item.gameItemObject);
-					airplane.transform.position = new Vector3 (gameObject.transform.position.x,
-						gameObject.transform.position.y + 10.0f, gameObject.transform.position.z);
-					Debug.Log ("WON!");
+					airplane.transform.position = new Vector3 (69.03f, -85.13f, gameObject.transform.position.z);
 				}
 			}
         }

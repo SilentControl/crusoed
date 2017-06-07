@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -10,6 +11,7 @@ public class RocketFly : MonoBehaviour {
 	Vector3 newposition;
 	float distance;
 	int deaths;
+	GameObject fireworks;
 	// Use this for initialization
 	void Start () {
 		nearRocket = false;
@@ -29,6 +31,10 @@ public class RocketFly : MonoBehaviour {
 				deaths = player.gameObject.GetComponent<PlayerStats>().deaths;
 				player.gameObject.SetActive (false);
 				launched = true;
+				fireworks = GameObject.Find ("FireworkSystem");
+				fireworks.transform.GetChild (0).gameObject.SetActive (true);
+				AudioSource endMusic = GameObject.Find("EndSound").GetComponent<AudioSource>();
+				endMusic.Play ();
 			}
 		}
 
