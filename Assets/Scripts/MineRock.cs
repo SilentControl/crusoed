@@ -25,6 +25,7 @@ public class MineRock : MonoBehaviour {
 				if (inventory.itemExists((int)itemEnum.PICKAXE) != -1)
 				{
 					player.gameObject.GetComponent<InventoryNew>().addItem((int)itemEnum.STONE);
+					player.transform.GetChild (2).GetChild (9).GetComponent<AudioSource> ().Play ();
 				}
 
 				timeout = true;

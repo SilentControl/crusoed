@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GraveDig.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerStats.cs" Line="86" Column="50" />
+      <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ChestReveal.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Food.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BoatMove.cs" Line="1" Column="1" />
@@ -10,17 +10,19 @@
       <File FileName="Assets\Scripts\Pause.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SetFire.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BackgroundMusic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TreeCut.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TreeCut.cs" Line="33" Column="6" />
       <File FileName="Assets\Scripts\DamagePlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DamagePlayerOnCol.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WaterCollect.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fishing.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InventoryNew.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InventoryNew.cs" Line="161" Column="25" />
       <File FileName="Assets\Scripts\IntroCameraMove.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\InventoryUIEnable.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CraftGUIEnable.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GUISlotInventory.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RocketFly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MineRock.cs" Line="28" Column="6" />
+      <File FileName="Assets\Scripts\GraveDig.cs" Line="51" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

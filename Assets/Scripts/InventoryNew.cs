@@ -63,6 +63,8 @@ public class InventoryNew : MonoBehaviour {
 	private ActionBubble actionBubble;
 	public AudioSource pickup;
 	public AudioSource pickupKey;
+	public AudioSource eatFood;
+	public AudioSource drinkWater;
     // Use this for initialization
     void Start () {
         playerStats = gameObject.GetComponent<PlayerStats>();
@@ -155,6 +157,12 @@ public class InventoryNew : MonoBehaviour {
 				playerStats.modifyHunger (healItem.getHungerValue ());
 				playerStats.modifyHealth (healItem.getHealthValue ());
 				playerStats.modifyThirst (healItem.getThirstValue ());
+
+				if (item.id == (int)itemEnum.WATER) {
+					drinkWater.Play ();
+				} else {
+					eatFood.Play ();
+				}
 
 				removeItem (position);
 				slotsManager.mapIcons (stacks);

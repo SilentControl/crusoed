@@ -7,15 +7,22 @@ public class GraveDig : MonoBehaviour {
 	bool dug;
 	bool nearGrave;
 	Collider2D player;
+	bool noreward;
 	// Use this for initialization
 	void Start () {
 		dug = false;
 		nearGrave = false;
+		noreward = true;
 
 		// check if the key is the reward
 		if (reward == itemEnum.AUTUMNKEY && transform.childCount > 1)
 		{
 			transform.GetChild (1).gameObject.SetActive (false);
+		}
+
+		if (reward == itemEnum.AUTUMNKEY || reward == itemEnum.IRON || reward == itemEnum.STEEL) 
+		{
+			noreward = false;
 		}
 	}
 	
@@ -23,16 +30,18 @@ public class GraveDig : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyUp(KeyCode.E))
 		{
-			if (nearGrave == true && player != null && dug == false)
+			if (nearGrave == true && player != null && dug == false && noreward == false)
 			{
 				InventoryNew inventory = player.gameObject.GetComponent<InventoryNew>();
 				int shovelPosition = inventory.itemExists((int)itemEnum.SHOVEL);
 
 				if (shovelPosition != -1)
 				{
+					player.transform.GetChild (2).GetChild (10).GetComponent<AudioSource> ().Play ();
 					if (reward != itemEnum.AUTUMNKEY)
 					{
 						inventory.addItem ((int)reward);
+						dug = true;
 					}
 
 					else
@@ -44,6 +53,16 @@ public class GraveDig : MonoBehaviour {
 						dug = true;
 					}
 				}
+			}
+
+			if (nearGrave == true && player != null && dug == true)
+			{
+				player.transform.GetChild (2).GetChild (10).GetComponent<AudioSource> ().Play ();
+			}
+
+			if (nearGrave == true && player != null && noreward == true)
+			{
+				player.transform.GetChild (2).GetChild (10).GetComponent<AudioSource> ().Play ();
 			}
 		}	
 	}
