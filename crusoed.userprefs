@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerStats.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerStats.cs" Line="82" Column="70" />
+      <File FileName="Assets\Scripts\PlayerStats.cs" Line="86" Column="50" />
       <File FileName="Assets\Scripts\ChestReveal.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Food.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BoatMove.cs" Line="1" Column="1" />
@@ -16,10 +16,11 @@
       <File FileName="Assets\Scripts\WaterCollect.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fishing.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\InventoryNew.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\IntroCameraMove.cs" Line="5" Column="26" />
-      <File FileName="Assets\Scripts\InventoryUIEnable.cs" Line="11" Column="38" />
-      <File FileName="Assets\Scripts\CraftGUIEnable.cs" Line="11" Column="20" />
-      <File FileName="Assets\Scripts\GUISlotInventory.cs" Line="18" Column="80" />
+      <File FileName="Assets\Scripts\IntroCameraMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InventoryUIEnable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CraftGUIEnable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUISlotInventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RocketFly.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

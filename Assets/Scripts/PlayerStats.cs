@@ -11,10 +11,12 @@ public class PlayerStats : MonoBehaviour
 	public int deaths;
 
 	public GameObject deathCounter;
+	public GameObject leftFirstIsland;
 
 	const float spawnPointX = 82.0f;
 	const float spawnPointY = -131.0f;
 	Vector3 checkpoint;
+	Vector3 startIsland;
 	// Use this for initialization
 	void Start ()
     {
@@ -22,6 +24,8 @@ public class PlayerStats : MonoBehaviour
         hunger = thirst = ticks = 0;
 		deaths = 0;
 		checkpoint = new Vector3 (spawnPointX, spawnPointY, 0.0f);
+		startIsland = new Vector3 (23.3f, -6.2f, 0.0f);
+
 	}
 
     public void modifyHealth(int value)
@@ -76,7 +80,10 @@ public class PlayerStats : MonoBehaviour
 			if (health <= 0)
 			{
 				deaths++;
-				gameObject.transform.position = checkpoint;
+				if (leftFirstIsland.transform.GetChild (0).gameObject.GetComponent<SetFire> ().isOnFire == true)
+					gameObject.transform.position = checkpoint;
+				else
+					gameObject.transform.position = startIsland;
 				health = 100;
 				thirst = hunger = 0;
 				deathCounter.transform.GetChild(0).GetComponent<Text> ().text = ": " + deaths;
