@@ -55,6 +55,14 @@ public class PlayerStats : MonoBehaviour
             thirst = 0;
     }
 
+	bool winterConditions()
+	{
+		return (gameObject.transform.position.x >= 555.0f &&
+				gameObject.transform.position.x <= 648.3f &&
+				gameObject.transform.position.y < -92.0f &&
+				gameObject.transform.position.y >= -148.35);
+	}
+
     // Update is called once per frame
     void FixedUpdate ()
     {
@@ -75,6 +83,10 @@ public class PlayerStats : MonoBehaviour
                 health -= 2;
                 thirst = 100;
             }
+
+			if (winterConditions() == true) {
+				health--;
+			}
 
 			// the player dies
 			if (health <= 0)

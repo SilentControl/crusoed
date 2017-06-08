@@ -14,6 +14,7 @@ public class ItemNo
 public class CraftRecipe : MonoBehaviour {
     public playerPlace place;
     public List<ItemNo> requiredItems;
+	public bool manuallyCraft;
 	// Use this for initialization
 	void Start () {
 	

@@ -7,6 +7,8 @@ public class CraftSlotsManager : MonoBehaviour {
     int lastSelected;
     public GameObject player;
     public GameObject itemDatabase;
+
+	PlayerStatus playerStatus;
     InventoryNew inventory;
     List<Item> craftable;
     InfoCraftUI selectedItemInfo;
@@ -16,7 +18,7 @@ public class CraftSlotsManager : MonoBehaviour {
         inventory = player.GetComponent<InventoryNew>();
         craftable = itemDatabase.GetComponent<ItemCollection>().getCraftList();
         selectedItemInfo = transform.parent.GetChild(2).GetComponent<InfoCraftUI>();
-        
+		playerStatus = player.GetComponent<PlayerStatus> ();
     }
 	
 	// Update is called once per frame
@@ -92,6 +94,14 @@ public class CraftSlotsManager : MonoBehaviour {
             enoughResources = true;
         }
 
+		if (recipe.place != playerPlace.idle)
+		{
+			if (recipe.place != playerStatus.getStatus ())
+			{
+				enoughResources = false;
+			}
+		}
+
         return enoughResources;
     }
 
@@ -100,16 +110,17 @@ public class CraftSlotsManager : MonoBehaviour {
         if (canCraft(craftable[position]))
         {
             CraftRecipe recipe = craftable[position].gameItemObject.GetComponent<CraftRecipe>();
-            foreach (ItemNo itemReq in recipe.requiredItems)
-            {
-                int pos = inventory.itemExists(itemReq.id);
-                for (int i = 0; i < itemReq.quantity; i++)
-                {
-                    inventory.removeItem(pos);
-                }
-            }
+			if (recipe.manuallyCraft == true)
+			{
+				foreach (ItemNo itemReq in recipe.requiredItems) {
+					int pos = inventory.itemExists (itemReq.id);
+					for (int i = 0; i < itemReq.quantity; i++) {
+						inventory.removeItem (pos);
+					}
+				}
 
-            inventory.addItem(craftable[position].id);
+				inventory.addItem (craftable [position].id);
+			}
         }
     }
 }
