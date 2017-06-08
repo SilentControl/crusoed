@@ -28,6 +28,7 @@ public class GUISlotsManager : MonoBehaviour {
         if (lastSelected != -1)
         {
             transform.GetChild(lastSelected).GetComponent<GUISlotInventory>().deselect();
+			selectedItemInfo.clearInfo ();
         }
 
         if (lastSelected != position)
@@ -53,8 +54,16 @@ public class GUISlotsManager : MonoBehaviour {
         else
         {
             lastSelected = -1;
+			selectedItemInfo.clearInfo ();
         }
     }
+
+	public void deselectAll()
+	{
+		if (lastSelected != -1)
+			transform.GetChild (lastSelected).GetComponent<GUISlotInventory> ().deselect ();
+		selectedItemInfo.clearInfo ();
+	}
 
     // match each slot with its corresponding icon
     public void mapIcons(List<Stack> inventory)

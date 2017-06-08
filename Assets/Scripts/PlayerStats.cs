@@ -17,6 +17,8 @@ public class PlayerStats : MonoBehaviour
 	const float spawnPointY = -131.0f;
 	Vector3 checkpoint;
 	Vector3 startIsland;
+
+	AudioSource deathSound;
 	// Use this for initialization
 	void Start ()
     {
@@ -25,7 +27,7 @@ public class PlayerStats : MonoBehaviour
 		deaths = 0;
 		checkpoint = new Vector3 (spawnPointX, spawnPointY, 0.0f);
 		startIsland = new Vector3 (23.3f, -6.2f, 0.0f);
-
+		deathSound = gameObject.transform.GetChild (2).GetChild (11).gameObject.GetComponent<AudioSource> ();
 	}
 
     public void modifyHealth(int value)
@@ -91,6 +93,7 @@ public class PlayerStats : MonoBehaviour
 			// the player dies
 			if (health <= 0)
 			{
+				deathSound.Play ();
 				deaths++;
 				if (leftFirstIsland.transform.GetChild (0).gameObject.GetComponent<SetFire> ().isOnFire == true)
 					gameObject.transform.position = checkpoint;

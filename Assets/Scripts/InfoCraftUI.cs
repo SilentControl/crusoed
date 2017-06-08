@@ -20,6 +20,14 @@ public class InfoCraftUI : MonoBehaviour {
 	
 	}
 
+	public void clearText()
+	{
+		description.text = "";
+		canCraft.text = "";
+		reqToCraft.text = "";
+		materials.text = "";		
+	}
+
     public void updateSelectedItemInfo(Item craftable, bool enoughRes, bool selected)
     {
         if (selected == false)

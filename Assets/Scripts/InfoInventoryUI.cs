@@ -31,4 +31,10 @@ public class InfoInventoryUI : MonoBehaviour {
             this.description.text = "";
         }
     }
+
+	public void clearInfo()
+	{
+		totalStack.text = "";
+		this.description.text = "";
+	}
 }

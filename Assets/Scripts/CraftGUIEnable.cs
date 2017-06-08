@@ -22,6 +22,12 @@ public class CraftGUIEnable : MonoBehaviour {
                 //background.transform.GetChild(0).GetComponent<CraftSlotsManager>().mapIcons();
             }
             background.SetActive(enable);
+			if (enable == true)
+			{
+				//background.transform.GetChild (2).transform.gameObject.GetComponent<InfoCraftUI> ().clearText ();
+				CraftSlotsManager manager = background.transform.GetChild (0).transform.gameObject.GetComponent<CraftSlotsManager>();
+				manager.deselectAll ();
+			}
             //Debug.Log("Pressed C!\n");
         }
 

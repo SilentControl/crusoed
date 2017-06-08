@@ -19,6 +19,7 @@ public class InventoryUIEnable : MonoBehaviour {
             enable = !enable;
             inventoryUI.SetActive(enable);
             manager.mapIcons(manager.inventory.stacks);
+			manager.deselectAll ();
         }
     }
 }

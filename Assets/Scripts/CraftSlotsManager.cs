@@ -52,6 +52,13 @@ public class CraftSlotsManager : MonoBehaviour {
         }
     }
 
+	public void deselectAll()
+	{
+		if (lastSelected != -1)
+			transform.GetChild (lastSelected).GetComponent<GUISlotInventory> ().deselect ();
+		selectedItemInfo.clearText ();
+	}
+
     // match each slot with its corresponding icon
     public void mapIcons()
     {
