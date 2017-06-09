@@ -23,6 +23,7 @@ public class PopUp : MonoBehaviour
 
         text = newGO.AddComponent<Text>();
         text.text = msg;
+		text.color = new Color (0, 0, 0);
         Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
         text.font = ArialFont;
         text.material = ArialFont.material;
@@ -44,7 +45,7 @@ public class PopUp : MonoBehaviour
 
                     newGO.transform.SetParent(canvas.transform);
 					RectTransform tr = newGO.GetComponent<RectTransform> ();
-					tr.anchoredPosition = new Vector3 (0.0f, 0.0f, 0.0f);
+					tr.anchoredPosition = new Vector3 (0.0f, 50.0f, 0.0f);
 					tr.sizeDelta = new Vector2(height, weight);
                 }
             }

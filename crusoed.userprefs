@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CraftGUIEnable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PopUp.cs">
     <Files>
       <File FileName="Assets\Scripts\GUISlotsManager.cs" Line="61" Column="1" />
-      <File FileName="Assets\Scripts\InfoInventoryUI.cs" Line="35" Column="25" />
-      <File FileName="Assets\Scripts\GUISlotInventory.cs" Line="33" Column="64" />
-      <File FileName="Assets\Scripts\InventoryUIEnable.cs" Line="22" Column="27" />
-      <File FileName="Assets\Scripts\CraftGUIEnable.cs" Line="29" Column="28" />
-      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="59" Column="29" />
-      <File FileName="Assets\Scripts\InfoCraftUI.cs" Line="28" Column="23" />
+      <File FileName="Assets\Scripts\InfoInventoryUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUISlotInventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InventoryUIEnable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CraftGUIEnable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CraftSlotsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InfoCraftUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScareCrowPuzzle.cs" Line="20" Column="72" />
+      <File FileName="Assets\Scripts\GraveGatePuzzle.cs" Line="19" Column="24" />
+      <File FileName="Assets\Scripts\PopUp.cs" Line="16" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

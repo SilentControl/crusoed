@@ -25,6 +25,7 @@ public class CrystalAdd : MonoBehaviour {
 				{
 					inventory.removeItem(crystalPosition);
 					crystalAdded = true;
+					gameObject.GetComponent<SpriteRenderer> ().color = new Color (0, 0, 0);
 				}
 			}
 		}	

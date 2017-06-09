@@ -5,6 +5,7 @@ public class ScareCrowPuzzle : MonoBehaviour {
 	public bool nearScareCrow;
 	Collider2D player;
 	public bool headAttached;
+	GameObject head;
 	// Use this for initialization
 	void Start () {
 		nearScareCrow = false;
