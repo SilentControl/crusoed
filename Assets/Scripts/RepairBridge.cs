@@ -28,18 +28,19 @@ public class RepairBridge : MonoBehaviour {
 				int rockPosition = inventory.itemExists((int)itemEnum.STONE);
 				int ironPosition = inventory.itemExists((int)itemEnum.IRON);
 				int lianaPosition = inventory.itemExists((int)itemEnum.LIANA);
-				if (stickPosition != -1 && inventory.stacks[stickPosition].size >= 10 &&
+
+				if (stickPosition != -1 && inventory.stacks[stickPosition].size >= 5 &&
 					rockPosition != -1 && inventory.stacks[rockPosition].size >= 5 &&
-					lianaPosition != -1 && inventory.stacks[lianaPosition].size >= 10 &&
+					lianaPosition != -1 && inventory.stacks[lianaPosition].size >= 5 &&
 					ironPosition != -1 && inventory.stacks[ironPosition].size >= 1)
 				{
-					for (int i = 1; i <= 10; i++)
+					for (int i = 1; i <= 5; i++)
 						inventory.removeItem(stickPosition);
 
 					for (int i = 1; i <= 5; i++)
 						inventory.removeItem(inventory.itemExists((int)itemEnum.STONE));
 
-					for (int i = 1; i <= 10; i++)
+					for (int i = 1; i <= 5; i++)
 						inventory.removeItem(inventory.itemExists((int)itemEnum.LIANA));
 
 					inventory.removeItem(inventory.itemExists((int)itemEnum.IRON));
