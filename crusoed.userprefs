@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Final.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RocketFly.cs">
     <Files>
       <File FileName="Assets\Scripts\GUISlotsManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\InfoInventoryUI.cs" Line="1" Column="1" />
@@ -16,9 +16,11 @@
       <File FileName="Assets\Scripts\CrystalAdd.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RepairBridge.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BoatMove.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RocketFly.cs" Line="42" Column="27" />
-      <File FileName="Assets\Scripts\Final.cs" Line="28" Column="47" />
-      <File FileName="Assets\Scripts\EndingLoadMenu.cs" Line="18" Column="27" />
+      <File FileName="Assets\Scripts\RocketFly.cs" Line="68" Column="75" />
+      <File FileName="Assets\Scripts\Final.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EndingLoadMenu.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DayNight.cs" Line="51" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

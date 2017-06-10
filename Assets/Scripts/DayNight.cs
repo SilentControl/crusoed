@@ -5,9 +5,11 @@ public class DayNight : MonoBehaviour {
 	Light sun;
 	int ticks = 0;
 	bool increaseLight = false;
+	public int days;
 	// Use this for initialization
 	void Start () {
 		sun = gameObject.GetComponent<Light> ();
+		days = 0;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,7 @@ public class DayNight : MonoBehaviour {
 			if (intensity <= 0.01f)
 			{
 				increaseLight = true;
+				days++;
 			}
 
 			if (increaseLight == true)
@@ -45,5 +48,6 @@ public class DayNight : MonoBehaviour {
 	{
 		sun.intensity = 0.79f;
 		increaseLight = true;
+		days++;
 	}
 }

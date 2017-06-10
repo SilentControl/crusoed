@@ -59,6 +59,30 @@ public class RocketFly : MonoBehaviour {
 				{
 					ending.transform.GetChild (0).gameObject.SetActive (true);
 					ending.transform.GetChild (0).GetChild (0).GetComponent<Text> ().text += deaths;
+
+					DayNight daynight = GameObject.Find ("Sun").GetComponent<DayNight> ();
+					ending.transform.GetChild (0).GetChild (2).GetComponent<Text> ().text += daynight.days;
+
+					if (daynight.days <= 5 && deaths <= 0) 
+					{
+						ending.transform.GetChild (0).GetChild (3).GetComponent<Text> ().text += "Superman";
+					}
+
+					else
+					if (daynight.days <= 10 && deaths > 0 && deaths < 3) 
+					{
+						ending.transform.GetChild (0).GetChild (3).GetComponent<Text> ().text += "Very good";
+					}		
+
+					else
+					if (daynight.days > 10 && deaths > 3 && deaths < 7) 
+					{
+						ending.transform.GetChild (0).GetChild (3).GetComponent<Text> ().text += "Average";
+					}
+
+					else
+						ending.transform.GetChild (0).GetChild (3).GetComponent<Text> ().text += "Slowpoke";
+
 					displayedEnd = true;
 				}
 			}
