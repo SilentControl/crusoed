@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\DayNight.cs" />
      <Compile Include="Assets\Scripts\EndingLoadMenu.cs" />
      <Compile Include="Assets\Scripts\ExcalliburEvent.cs" />
+     <Compile Include="Assets\Scripts\Final.cs" />
      <Compile Include="Assets\Scripts\FinalChestOpen.cs" />
      <Compile Include="Assets\Scripts\FireDemonPuzzle.cs" />
      <Compile Include="Assets\Scripts\FirePuzzle.cs" />

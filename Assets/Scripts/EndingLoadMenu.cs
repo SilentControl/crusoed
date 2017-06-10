@@ -15,6 +15,6 @@ public class EndingLoadMenu : MonoBehaviour {
 
 	public void continueMenu()
 	{
-		Application.LoadLevel (0);
+		Application.LoadLevel (4);
 	}
 }

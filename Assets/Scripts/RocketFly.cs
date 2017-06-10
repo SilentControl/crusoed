@@ -12,6 +12,7 @@ public class RocketFly : MonoBehaviour {
 	float distance;
 	int deaths;
 	GameObject fireworks;
+	AudioSource fireworkSound;
 	// Use this for initialization
 	void Start () {
 		nearRocket = false;
@@ -33,8 +34,12 @@ public class RocketFly : MonoBehaviour {
 				launched = true;
 				fireworks = GameObject.Find ("FireworkSystem");
 				fireworks.transform.GetChild (0).gameObject.SetActive (true);
+				fireworkSound = GameObject.Find("FireworkSound").GetComponent<AudioSource>();
 				AudioSource endMusic = GameObject.Find("EndSound").GetComponent<AudioSource>();
+				endMusic.loop = true;
 				endMusic.Play ();
+				fireworkSound.loop = true;
+				fireworkSound.Play ();
 			}
 		}
 

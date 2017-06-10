@@ -11,10 +11,12 @@ public class BoatMove : MonoBehaviour {
 	bool stopped;
 	public GameObject directionalLight;
 	Light objlight;
+	public AudioSource explosion;
+	public AudioSource blueDanube;
 
 	IEnumerator Waiter()
 	{
-		yield return new WaitForSecondsRealtime (0.7f);
+		yield return new WaitForSecondsRealtime (0.1f);
 		Application.LoadLevel (1);
 	}
 	// Use this for initialization
@@ -23,10 +25,11 @@ public class BoatMove : MonoBehaviour {
 		newposition = new Vector3 ();
 		objlight = directionalLight.GetComponent<Light> ();
 		stopped = false;
+		blueDanube.Play ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (stopped == false) {
 			transform.position += amplitude * (Mathf.Sin (2 * Mathf.PI * frequency * Time.time) -
 			Mathf.Sin (2 * Mathf.PI * frequency * (Time.time - Time.deltaTime))) * transform.up;
@@ -38,6 +41,8 @@ public class BoatMove : MonoBehaviour {
 				objlight.intensity = 8;
 				objlight.bounceIntensity = 8;
 				stopped = true;
+				blueDanube.Stop ();
+				explosion.Play ();
 				StartCoroutine (Waiter ());
 			}
 		}
