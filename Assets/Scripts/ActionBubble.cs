@@ -21,6 +21,7 @@ public class ActionBubble : MonoBehaviour {
 
 	IEnumerator bubbleTime(Sprite sprite)
 	{
+		bubble.SetActive (false);
 		bubble.SetActive (true);
 		bubble.transform.GetChild (0).GetComponent<SpriteRenderer> ().sprite = sprite;
 		yield return new WaitForSecondsRealtime (1.5f);
